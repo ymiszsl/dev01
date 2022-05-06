@@ -1,0 +1,7 @@
+spring:
+  mvc:
+    pathmatch:
+#      简单理解，就是路径字符串的匹配规则。这块必须写
+      # springboot2.6.X用的是PATH_PATTERN_PARSER
+      # 但是swagger用的是ant_path_matcher
+      matching-strategy: ant_path_matcher
