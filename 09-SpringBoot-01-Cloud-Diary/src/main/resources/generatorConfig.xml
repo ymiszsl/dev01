@@ -49,9 +49,6 @@
         <table schema="" tableName="tb_note_type"/>
         <table schema="" tableName="tb_user"/>
 
-        <!--        <table schema="" tableName="department"/>-->
-        <!--        <table schema="" tableName="user"/>-->
-
         <!-- 有些表的字段需要指定java类型-->
         <!--<table schema="" tableName="">-->
         <!--    <columnOverride column="" javaType=""/>-->

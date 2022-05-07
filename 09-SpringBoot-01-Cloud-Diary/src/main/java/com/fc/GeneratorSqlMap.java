@@ -20,9 +20,7 @@ public class GeneratorSqlMap {
     public static void main(String[] args) {
         try {
             List<String> warnings = new ArrayList<>();
-            //指定 逆向工程
-            // 配置文件
-            //D:\idea-cuer\06-SSM-02-povertyAlleviation
+            //指定 逆向工程配置文件
             File configFile = new File("D:\\idea-cuer\\dev01\\09-SpringBoot-01-Cloud-Diary/src/main/resources/generatorConfig.xml");
             ConfigurationParser cp = new ConfigurationParser(warnings);
             Configuration config = cp.parseConfiguration(configFile);

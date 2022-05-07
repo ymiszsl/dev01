@@ -1,35 +1,35 @@
-# ÅäÖÃÊı¾İÔ´
+# é…ç½®æ•°æ®æº
 spring:
   datasource:
-    # Ê¹ÓÃÄ¬ÈÏµÄHikariÊı¾İÔ´
+    # ä½¿ç”¨é»˜è®¤çš„Hikariæ•°æ®æº
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloud_diary?useSSL=false&useUnicode=true&characterEncoding=UTF8&serverTimeZone=GTM+8
     username: root
     password: 962464
 
-# MyBatisÅäÖÃ
+# MyBatisé…ç½®
 mybatis:
-  # mybatisÅäÖÃÎÄ¼şµÄÂ·¾¶
+  # mybatisé…ç½®æ–‡ä»¶çš„è·¯å¾„
   # config-location:
   mapper-locations: com/fc/mapper/*.xml
   type-aliases-package: com.fc.entity
   configuration:
-    # ¶ş¼¶»º´æ
+    # äºŒçº§ç¼“å­˜
     cache-enabled: true
-    # ÈÕÖ¾
+    # æ—¥å¿—
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    # Ö÷¼ü»ØÌî
+    # ä¸»é”®å›å¡«
     use-generated-keys: true
-    # ÀÁ¼ÓÔØ
+    # æ‡’åŠ è½½
     lazy-loading-enabled: true
-    # »ı¼«¼ÓÔØ
+    # ç§¯æåŠ è½½
     aggressive-lazy-loading: false
-    # ÍÕ·åÃüÃû
+    # é©¼å³°å‘½å
     map-underscore-to-camel-case: true
 
 pagehelper:
-  # ·ÖÒ³ºÏÀí»¯
+  # åˆ†é¡µåˆç†åŒ–
   reasonable: true
-  # ×Ô¶¯Ê¶±ğ·½ÑÔ
+  # è‡ªåŠ¨è¯†åˆ«æ–¹è¨€
   auto-dialect: true
