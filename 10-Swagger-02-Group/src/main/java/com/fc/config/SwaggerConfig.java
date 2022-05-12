@@ -17,20 +17,21 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 @EnableSwagger2WebMvc
 public class SwaggerConfig {
     @Bean
-    public  Docket buffer_Docket(){
-        return  new Docket(DocumentationType.SWAGGER_2)
+    public Docket buffer_Docket() {
+        return new Docket(DocumentationType.SWAGGER_2)
                 //添加api基本信息、
-        .apiInfo(apiInfo_Buffer())
+                .apiInfo(apiInfo_Buffer())
                 .groupName("buffer")
                 //对基本信息进行查询
-        .select()
+                .select()
                 //扫描
-        .apis(RequestHandlerSelectors.basePackage("com.fc"))
+                .apis(RequestHandlerSelectors.basePackage("com.fc"))
                 //支持所有以user开头的url路径
-        .paths(PathSelectors.ant("/user/**"))
+                .paths(PathSelectors.ant("/user/**"))
                 //构建
-        .build();
+                .build();
     }
+
     // 一个Docket就对应一个文档
     @Bean
     public Docket yyqx_Docket() {

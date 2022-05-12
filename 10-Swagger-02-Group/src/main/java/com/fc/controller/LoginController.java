@@ -9,13 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("login")
 public class LoginController {
     @GetMapping("login")
-    public  String login(){
+    public String login() {
         return "login";
     }
+
     @GetMapping("logout")
-    public  String logout(){
-        return  "logout";
+    public String logout() {
+        return "logout";
     }
+
     @GetMapping("getVerifyCode")
     public String getVerifyCode() {
         return "getVerifyCode";

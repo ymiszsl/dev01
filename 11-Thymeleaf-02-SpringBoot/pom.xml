@@ -9,14 +9,21 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.fc</groupId>
-    <artifactId>10-swagger-02-group</artifactId>
+    <artifactId>11-thymeleaf-02-springboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>10-Swagger-02-Group</name>
+    <name>11-Thymeleaf-02-SpringBoot</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
+        <!--SpringBoot整合Thymeleaf的场景启动器-->
+        <!--当前项目中就包含了使用Thymeleaf的所需要的所有环境-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -31,18 +38,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>1.6.5</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.10.5</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 

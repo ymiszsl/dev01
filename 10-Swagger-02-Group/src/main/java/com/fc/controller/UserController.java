@@ -32,7 +32,7 @@ public class UserController {
     @ApiOperation(value = "分页查询用户", tags = "select")
     @GetMapping("findByPage")
     public String findByPage(@ApiParam(defaultValue = "分页参数：当前页", example = "1")
-                                 @RequestParam(defaultValue = "1") Integer pageNum,
+                             @RequestParam(defaultValue = "1") Integer pageNum,
                              @ApiParam(defaultValue = "分页参数：每页显示多少条数据", example = "5")
                              @RequestParam(defaultValue = "5") Integer pageSize) {
         return "findByPage:当前页：" + pageNum + ",每页显示多少条数据：" + pageSize;

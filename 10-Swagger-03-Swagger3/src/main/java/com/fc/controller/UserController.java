@@ -7,12 +7,13 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("user")
 @Api(tags = "用户模块", description = "用户的所有操作")
 public class UserController {
-    @ApiOperation(hidden = true, value = "查询所有的用户", tags = "select")
+    @ApiOperation( value = "查询所有的用户", tags = "select")
     @GetMapping("findAll")
     public String findAll() {
         return "user findAll";
@@ -26,7 +27,7 @@ public class UserController {
 
     @ApiOperation(value = "根据id查询对应的用户", tags = "select")
     @GetMapping("findById")
-    public String findById(@ApiParam(allowableValues = "range(1, 5)", required = true, hidden = true) @RequestParam(defaultValue = "1") Integer id) {
+    public String findById(@ApiParam(allowableValues = "range(1, 5)", required = true) @RequestParam(defaultValue = "1") Integer id) {
         System.out.println("获取到的id：" + id);
         return "user findById:" + id;
     }
@@ -34,7 +35,7 @@ public class UserController {
     @ApiOperation(value = "分页查询用户", tags = "select")
     @GetMapping("findByPage")
     public String findByPage(@ApiParam(defaultValue = "分页参数：当前页", example = "1")
-                                 @RequestParam(defaultValue = "1") Integer pageNum,
+                             @RequestParam(defaultValue = "1") Integer pageNum,
                              @ApiParam(defaultValue = "分页参数：每页显示多少条数据", example = "5")
                              @RequestParam(defaultValue = "5") Integer pageSize) {
         return "findByPage:当前页：" + pageNum + ",每页显示多少条数据：" + pageSize;
@@ -58,7 +59,6 @@ public class UserController {
     public String update() {
         return "user update";
     }
-
     @ApiOperation(value = "测试获取请求头", tags = "select")
     @GetMapping("getHead")
     public String getHead(HttpServletRequest request) {
